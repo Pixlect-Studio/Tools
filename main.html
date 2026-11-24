@@ -80,17 +80,90 @@ body[data-theme="dark"] .pxl-office-ribbon{background:var(--panel);color:var(--i
 body[data-theme="dark"] .updates-hero{background:linear-gradient(112deg,#0c1c3b,#142f5e 54%,#353276)}body[data-theme="dark"] .updates-art-card{background:#f9fbff}body[data-theme="dark"] .updates-status-icon{background:#123b39;color:#7ee0c7}body[data-theme="dark"] .news-category{background:#1d3355;color:#c5d7ff}body[data-theme="dark"] .category-breaking{background:#482a2d;color:#ffb2a5}body[data-theme="dark"] .category-weekly{background:#322850;color:#d5c1ff}body[data-theme="dark"] .category-pixlect{background:#173c38;color:#9de3d3}
 @media(max-width:760px){#updatesView{padding:14px 10px 30px}.updates-heading-row{align-items:flex-start;flex-direction:column}.updates-heading-row>.btn{align-self:stretch}.updates-hero{min-height:0;padding:25px 21px}.updates-hero-art{display:none}.updates-status-row{align-items:flex-start;flex-direction:column}.updates-status-metrics{width:100%;justify-content:flex-start}.updates-status-metrics div{text-align:left}.updates-feed-heading{align-items:stretch;flex-direction:column}.updates-search{width:100%}.news-cards{grid-template-columns:1fr}.news-card-featured{grid-column:auto}.news-card-featured h3{font-size:18px}.updates-footer{align-items:flex-start;flex-direction:column;gap:7px}}
 
+
+
+/* Final workspace polish: compact responsive header and complete dark theme. */
+.topbar{height:auto;min-height:62px;flex-wrap:wrap;align-content:center;padding:9px 16px;gap:10px;background:var(--panel)}
+.brand{min-width:0;flex:0 0 auto}
+.top-nav{display:flex;align-items:center;gap:6px;flex:0 0 auto;min-width:0}
+.doc-title{flex:1 1 160px;min-width:145px;max-width:100%}
+.doc-title input{width:clamp(100px,17vw,230px);min-width:80px}
+.top-actions{display:flex;align-items:center;justify-content:flex-end;gap:6px;flex:0 1 auto;min-width:0;flex-wrap:wrap}
+.topbar .btn.small{white-space:nowrap;padding:7px 9px;font-size:11px}
+#updatesTopBtn.active{background:color-mix(in srgb,var(--blue) 12%,var(--panel));border-color:color-mix(in srgb,var(--blue) 40%,var(--line));color:var(--blue)}
+.updates-minimal{width:min(100%,900px);margin:8px auto 0}
+.updates-titlebar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:22px}
+.updates-titlebar h1{font-size:clamp(28px,4vw,40px);line-height:1.1;letter-spacing:-1.2px;margin:7px 0;color:var(--ink)}
+.updates-last-checked{margin:0;color:var(--muted);font-size:12px}
+.news-feed-message{min-height:170px}
+.news-feed-message a{margin-top:6px;color:var(--blue);font-weight:700;text-decoration:none}
+.news-latest{padding:clamp(20px,3vw,32px);border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--shadow)}
+.news-latest-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:10px;font-weight:750;letter-spacing:.5px}
+.news-latest h2{margin:16px 0 10px;color:var(--ink);font-size:clamp(22px,3vw,30px);line-height:1.2;letter-spacing:-.6px}
+.news-latest p{margin:0;color:var(--muted);font-size:14px;line-height:1.75;white-space:pre-wrap}
+.news-latest-full{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);color:var(--ink);font-size:14px;line-height:1.8;white-space:pre-wrap;overflow-wrap:anywhere}
+.news-latest-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-top:22px}
+.news-latest-actions a{text-decoration:none}
+body[data-theme="dark"]{--ink:#e6edf8;--muted:#a4b2c8;--line:#2a3950;--panel:#141f30;--bg:#0b1320;--soft:#101b2b;--shadow:0 12px 34px #0006;color-scheme:dark;background:var(--bg);color:var(--ink)}
+body[data-theme="dark"] .topbar,body[data-theme="dark"] .sidebar,body[data-theme="dark"] .toolbar-wrap,body[data-theme="dark"] .statusbar{background:var(--panel);border-color:var(--line)}
+body[data-theme="dark"] .suite-view{background:var(--bg)}
+body[data-theme="dark"] :is(.suite-search,.app-card,.welcome-panel,.suite-appbar,.utility-card,.theme-panel,.ai-shell,.ai-chat,.pxl-dashboard-panel,.pxl-dashboard-search,.pxl-txt-panel,.pxl-office-ribbon,.pdf-viewer,.pdf-notes,.slide-rail,.scene-panel,.video-main,.video-panel,.updates-status-row,.news-feed-message,.news-card,.news-latest,.export-dialog){background-color:var(--panel);color:var(--ink);border-color:var(--line)}
+body[data-theme="dark"] :is(input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="range"]),textarea,select){background-color:var(--soft);color:var(--ink);border-color:var(--line)}
+body[data-theme="dark"] .doc-title input{background:transparent;color:var(--ink)}
+body[data-theme="dark"] .doc-title input:hover,body[data-theme="dark"] .doc-title input:focus{background:var(--soft)}
+body[data-theme="dark"] :is(.doc-item,.tool,.slide-thumb,.pxl-search-result,.pxl-command-item){color:var(--ink)}
+body[data-theme="dark"] :is(.doc-item:hover,.tool:hover,.slide-thumb,.slide-thumb.active,.pxl-search-result:hover,.pxl-command-item:hover,.pxl-command-item.active,.ai-review-preview,.ai-composer textarea,.pxl-ai-destination,.pxl-toolstrip,.pxl-notes-panel,.pxl-qr-preview,.pxl-panel-content,.format-preview,.filename-field){background:var(--soft);color:var(--ink);border-color:var(--line)}
+body[data-theme="dark"] :is(.side-heading,.side-foot,.save-status,.rail-heading,.suite-top p,.app-card small,.app-card em,.welcome-panel p,.suite-subtitle,.suite-footer,.pdf-notes p,.ai-status,.setting-field,.pxl-dashboard-search span){color:var(--muted)}
+body[data-theme="dark"] :is(.doc-item.selected,.btn.active){background:#1e3558;color:#cfe0ff;border-color:#345783}
+body[data-theme="dark"] .btn{background:#1b2a40;color:var(--ink);border-color:var(--line)}
+body[data-theme="dark"] .btn:hover{background:#243650;border-color:#415675}
+body[data-theme="dark"] .btn.primary,body[data-theme="dark"] .btn.primary:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+body[data-theme="dark"] .close-btn{background:#26354a;color:var(--ink)}
+body[data-theme="dark"] .field-label,body[data-theme="dark"] .dialog-head h2{color:var(--ink)}
+body[data-theme="dark"] .format-preview small{color:var(--muted)}
+body[data-theme="dark"] .filename-field input{background:var(--soft);color:var(--ink)}
+body[data-theme="dark"] .filename-field span{background:var(--soft);color:var(--muted)}
+body[data-theme="dark"] :is(.app-card em,.suite-avatar,.welcome-symbol,.format-icon){background:#1e3558;color:#cfe0ff}
+body[data-theme="dark"] :is(.settings-warning,.scratch-banner){background:#332719;color:#fbd38d;border-color:#704d2b}
+body[data-theme="dark"] .scene-item button{color:var(--ink);border-color:var(--line)}
+body[data-theme="dark"] .updates-last-checked,body[data-theme="dark"] .news-latest-meta{color:var(--muted)}
+@media(max-width:1450px){
+ .topbar{gap:8px;padding:8px 12px}
+ .brandname{display:none}
+ .top-nav{order:1}
+ .doc-title{order:2;flex:1 1 180px}
+ .top-actions{order:3;flex:1 1 100%;justify-content:flex-end;padding-top:2px}
+ .toolbar-wrap{top:0;position:relative}
+}
+@media(max-width:650px){
+ .topbar{align-items:center;gap:7px;padding:8px 10px}
+ .brand{order:0}
+ .top-nav{order:1;flex:1 1 auto;justify-content:flex-start;gap:5px}
+ .topbar .btn.small{padding:7px 8px;font-size:10px}
+ .doc-title{order:2;flex:1 1 100%;min-width:0}
+ .doc-title input{width:min(62vw,230px)}
+ .top-actions{order:3;justify-content:flex-start;flex:1 1 100%;overflow:visible}
+ .toolbar-wrap{top:0;position:relative}
+ .updates-titlebar{align-items:flex-start}
+ .news-latest-actions{align-items:stretch}
+ .news-latest-actions .btn{flex:1 1 150px}
+}
+
 </style>
 </head>
 <body>
 
 
 <div class="app" id="app">
-<header class="topbar">
+<header class="topbar" role="banner">
   <div class="brand"><div class="logo">PX</div><div class="brandname">Pixlect <small>MICROSOFT 365-INSPIRED WORKSPACE</small></div></div>
-  <button class="btn small" id="homeBtn">⌂ Home</button><button class="btn small" id="updatesTopBtn" type="button">▤ Updates</button><a class="btn small" href="./index.html" style="text-decoration:none">Pixlect Home</a>
+  <nav class="top-nav" aria-label="Main navigation">
+    <button class="btn small" id="homeBtn" type="button">⌂ Home</button>
+    <button class="btn small" id="updatesTopBtn" type="button" aria-controls="updatesView">▤ Updates</button>
+    <a class="btn small" href="./index.html" style="text-decoration:none">Pixlect Home</a>
+  </nav>
   <div class="doc-title"><input id="docName" aria-label="Document name" value="Untitled document"><span class="save-status" id="saveStatus">Saved locally</span></div>
-  <div class="top-actions"><button class="btn small" id="quickCommandBtn" title="Open quick commands (Ctrl+K)">⌘ Command</button><button class="btn small" id="elementImportBtn" title="Import an element into another tool">◇ Elements</button><button class="btn small" id="settingsTopBtn">⚙ Settings</button><button class="btn small" id="aiTopBtn">✦ Pixlect AI</button><button class="btn small" id="scratchBtn" title="Open temporary scratch pad">✎ Scratch</button><button class="btn small" id="importBtn">↑ Import</button><button class="btn primary small" id="exportBtn">↓ Export</button></div>
+  <div class="top-actions" aria-label="Workspace actions"><button class="btn small" id="quickCommandBtn" title="Open quick commands (Ctrl+K)">⌘ Command</button><button class="btn small" id="elementImportBtn" title="Import an element into another tool">◇ Elements</button><button class="btn small" id="settingsTopBtn">⚙ Settings</button><button class="btn small" id="aiTopBtn">✦ Pixlect AI</button><button class="btn small" id="scratchBtn" title="Open temporary scratch pad">✎ Scratch</button><button class="btn small" id="importBtn">↑ Import</button><button class="btn primary small" id="exportBtn">↓ Export</button></div>
 </header>
 <nav class="global-ai-rail" aria-label="Pixlect global tools"><button type="button" id="globalAiBtn" title="Open Pixlect AI" aria-label="Open Pixlect AI"><span>✦</span><small>AI</small></button></nav>
 
@@ -105,7 +178,6 @@ body[data-theme="dark"] .updates-hero{background:linear-gradient(112deg,#0c1c3b,
   <button class="app-card" data-app="pdf"><span class="app-icon" style="background:#dc5252">PDF</span><strong>Pixlect PDF</strong><small>PDF viewer and annotation workspace</small><em>.PDF / .PixlectPDF</em></button>
   <button class="app-card" data-app="tools"><span class="app-icon tools-icon">⚙</span><strong>Pixlect Tools</strong><small>Utilities and file tools</small><em>TOOLS</em></button>
   <button class="app-card" data-app="ai"><span class="app-icon" style="background:linear-gradient(135deg,#8b5cf6,#2563eb)">✦ AI</span><strong>Pixlect AI</strong><small>Write, create slides and understand PDFs</small><em>GROQ POWERED</em></button>
-  <button class="app-card" data-app="updates"><span class="app-icon" style="background:linear-gradient(135deg,#0f9f91,#2563eb)">NEWS</span><strong>Studio Updates</strong><small>Latest public announcements from Pixlect Studio</small><em>LIVE NEWS FEED</em></button>
  </div>
  <div class="suite-section-title recent-title">Your Pixlect workspace</div>
  <section class="pxl-dashboard-panel"><div class="pxl-dashboard-head"><div><div class="eyebrow">PROJECT HUB</div><h2>Pick up where you left off</h2><p>Recent documents and workspace projects stay together on this device.</p></div><button class="btn small" id="refreshRecentProjects">↻ Refresh</button></div><div id="recentProjects" class="pxl-recent-grid"><div class="pxl-recent-empty">Your recent projects will appear here.</div></div><div class="pxl-dashboard-search"><input id="projectSearch" placeholder="Search saved TXT documents and recent projects…" aria-label="Search projects"><span id="projectSearchCount">Search your workspace</span></div><div id="projectSearchResults" class="pxl-search-results"></div></section>
@@ -137,47 +209,33 @@ body[data-theme="dark"] .updates-hero{background:linear-gradient(112deg,#0c1c3b,
 <section class="suite-view hidden" id="aiView"><div class="suite-appbar"><button class="btn small" data-home>← Home</button><span class="mini-app" style="background:linear-gradient(135deg,#8b5cf6,#2563eb)">✦ AI</span><strong>Pixlect AI</strong><span class="suite-subtitle">Your creative assistant</span><span class="grow"></span><button class="btn small" id="aiSettingsBtn">AI settings</button></div><div class="ai-shell"><div class="ai-controlbar"><div class="ai-control-left"><strong>Pixlect AI workspace</strong><span id="aiContextLabel">Context: current workspace</span></div><label class="pxl-ai-context">AI context <select id="aiContextPicker"><option value="auto">Auto · active workspace</option><option value="txt-current">Current TXT</option><option value="pp-current">Current presentation</option><option value="pdf-current">Current PDF</option></select></label><div class="ai-control-actions"><button class="btn small" id="openTxtFromAi">▤ Open TXT</button><button class="btn small" id="newAiChat">＋ New conversation</button><button class="btn small" id="scanCurrentDoc">⌕ Scan current document</button><button class="btn small" id="summarizeSelectedContext">✦ Summarize source</button><select id="aiChatHistorySelect" aria-label="Saved AI conversations"><option value="">Conversation history</option></select></div></div><div class="ai-heading"><div class="ai-orb">✦</div><div><h2 style="margin:0">What are we creating today?</h2><div class="ai-status" id="aiStatus">Connect your Groq key in Settings to start.</div></div></div><div class="ai-actions"><button class="ai-chip" data-prompt="Help me write a clear, polished document about ">✍ Write something</button><button class="ai-chip" data-prompt="Create a presentation outline about ">▤ Create presentation</button><button class="ai-chip" data-prompt="Explain this topic simply: ">◇ Explain a topic</button><button class="ai-chip" data-prompt="Give me creative ideas for ">✧ Brainstorm ideas</button></div><div class="ai-chat" id="aiChat"><div class="ai-msg assistant">Hi! I'm Pixlect AI. I can help write documents, plan presentations, summarize PDFs and brainstorm ideas. Add your own Groq API key in Settings to connect me.</div></div>
 <div class="ai-review-panel hidden" id="aiReviewPanel"><div class="ai-review-head"><div><strong>Document suggestion ready</strong><div class="ai-status">Review the suggested content before applying it. Your original text is not changed automatically.</div></div><button class="btn small" id="dismissAiReview">Dismiss</button></div><div class="ai-review-preview" id="aiReviewPreview"></div><div class="ai-review-actions"><button class="btn primary small" id="applySuggestedReplace">Replace current TXT…</button><button class="btn small" id="insertSuggestedTxt">Insert into current TXT</button><button class="btn small" id="createTxtFromSuggestion">Create new TXT</button></div></div>
 <div class="ai-composer"><textarea id="aiPrompt" placeholder="Ask Pixlect AI to write, plan, explain or summarize…"></textarea><button class="btn primary" id="sendAi">Send ↗</button></div><div class="pxl-ai-destination"><label>TXT destination <select id="aiTxtTargetSelect"><option value="">Choose a saved TXT document…</option></select></label><button class="btn primary small" id="addAiToSelectedTxt">＋ Add response to selected TXT</button><button class="btn small" id="aiGoToDocument">↗ Go to this document</button><button class="btn small" id="aiAddToElements">◇ Save response as element</button></div><div class="ai-actions"><button class="btn small" id="useAiTxt">Insert response into TXT</button><button class="btn small" id="applyAiRewrite">Apply as document rewrite</button><button class="btn small" id="useAiSlides">Turn response into slides</button><span class="ai-status">AI responses can be inaccurate. Review before using.</span></div></div></section>
-<section class="suite-view hidden" id="updatesView">
- <div class="updates-shell">
-  <div class="updates-heading-row">
-   <div>
-    <div class="eyebrow">PIXLECT STUDIO · OFFICIAL CHANNEL</div>
-    <h1>Studio Updates</h1>
-    <p>Product news, announcements and the latest from Pixlect Studio.</p>
-   </div>
-   <button class="btn primary" id="refreshNewsBtn" type="button"><span aria-hidden="true">↻</span> Refresh updates</button>
+<section class="suite-view hidden" id="updatesView" aria-labelledby="updatesPageTitle">
+  <div class="updates-minimal">
+    <div class="updates-titlebar">
+      <div>
+        <div class="eyebrow">PIXLECT STUDIO · OFFICIAL NEWS</div>
+        <h1 id="updatesPageTitle">Latest update</h1>
+        <p id="newsLastUpdated" class="updates-last-checked">Checking the official news sources…</p>
+      </div>
+      <button class="btn small" id="refreshNewsBtn" type="button">↻ Refresh</button>
+    </div>
+    <div id="newsFeedMessage" class="news-feed-message" role="status" aria-live="polite">
+      <span class="news-loader" aria-hidden="true"></span>
+      <strong>Loading the latest update</strong>
+      <span>Checking Pixlect Studio News and the public news database.</span>
+    </div>
+    <article id="newsLatestCard" class="news-latest hidden" aria-live="polite">
+      <div class="news-latest-meta"><span id="newsSourceLabel">PIXLECT STUDIO NEWS</span><time id="newsLatestDate"></time></div>
+      <h2 id="newsLatestTitle"></h2>
+      <p id="newsLatestPreview"></p>
+      <div id="newsLatestFull" class="news-latest-full hidden"></div>
+      <div class="news-latest-actions">
+        <button class="btn primary" id="readLatestNews" type="button" aria-expanded="false">Read Latest News</button>
+        <a class="btn" id="goToNewsSource" href="https://pixlect-studio.github.io/News/" target="_blank" rel="noopener noreferrer">Go to Source ↗</a>
+      </div>
+    </article>
   </div>
-  <section class="updates-hero">
-   <div class="updates-hero-copy">
-    <div class="updates-live-label"><span class="updates-live-dot"></span> OFFICIAL NEWS FEED</div>
-    <h2>Everything happening<br>at Pixlect Studio.</h2>
-    <p>One clear place for product announcements, releases and studio news. The feed checks Pixlect Studio News and its public news database automatically.</p>
-    <div class="updates-hero-actions"><button class="updates-hero-button" id="updatesHeroRefresh" type="button">Check for latest news <span>→</span></button><span class="updates-hero-note">PUBLIC · READ ONLY</span></div>
-   </div>
-   <div class="updates-hero-art" aria-hidden="true">
-    <div class="updates-art-orbit orbit-one"></div><div class="updates-art-orbit orbit-two"></div>
-    <div class="updates-art-card"><div class="updates-art-card-top"><span>PX</span><i></i><i></i><i></i></div><div class="updates-art-kicker">STUDIO BRIEFING</div><div class="updates-art-line line-wide"></div><div class="updates-art-line line-mid"></div><div class="updates-art-squares"><b></b><b></b><b></b></div><div class="updates-art-line line-small"></div></div>
-    <div class="updates-art-bubble">✦</div>
-   </div>
-  </section>
-  <div class="updates-status-row">
-   <div class="updates-status-left"><span class="updates-status-icon">◉</span><div><strong id="newsSourceStatus">Connecting to official news…</strong><small id="newsLastUpdated">Checking public sources for the newest posts</small></div></div>
-   <div class="updates-status-metrics"><div><strong id="newsCount">—</strong><span>PUBLIC UPDATES</span></div><div><strong>2</strong><span>NEWS SOURCES</span></div></div>
-  </div>
-  <div class="updates-feed-heading"><div><div class="eyebrow">THE LATEST</div><h2>News & announcements</h2><p>Browse the latest public updates from Pixlect Studio.</p></div><label class="updates-search"><span aria-hidden="true">⌕</span><input id="newsSearch" type="search" placeholder="Search updates…" aria-label="Search updates"></label></div>
-  <div class="updates-filters" role="group" aria-label="Filter news category">
-   <button class="updates-filter active" type="button" data-news-filter="all">All updates</button>
-   <button class="updates-filter" type="button" data-news-filter="breaking">Breaking</button>
-   <button class="updates-filter" type="button" data-news-filter="pixlect">Pixlect</button>
-   <button class="updates-filter" type="button" data-news-filter="normal">Normal</button>
-   <button class="updates-filter" type="button" data-news-filter="weekly">Weekly</button>
-  </div>
-  <div id="newsFeedMessage" class="news-feed-message" role="status" aria-live="polite"><span class="news-loader"></span><strong>Loading the latest updates</strong><span>Checking the official Pixlect news sources.</span></div>
-  <div id="newsCards" class="news-cards" aria-live="polite"></div>
-  <div class="updates-footer"><span>PIXLECT STUDIO · OFFICIAL UPDATES</span><span>Public announcements only</span><a href="https://pixlect-studio.github.io/News/" target="_blank" rel="noopener noreferrer">Open News site ↗</a></div>
- </div>
-</section>
-<section class="suite-view hidden" id="settingsView"><div class="suite-appbar"><button class="btn small" data-home>← Home</button><strong>⚙ Settings</strong><span class="suite-subtitle">Make Pixlect feel like yours</span></div><div class="theme-panel"><div class="eyebrow">APPEARANCE</div><h1 style="margin:5px 0 3px">Make it your workspace.</h1><p style="color:var(--muted);margin-top:0">Choose a theme and accent color. Changes apply across Pixlect.</p><h3>Theme</h3><div class="theme-options"><button class="theme-swatch" data-theme-choice="light">☀️<br><strong>Light</strong></button><button class="theme-swatch" data-theme-choice="dark">🌙<br><strong>Dark</strong></button><button class="theme-swatch" data-theme-choice="system">💻<br><strong>System</strong></button></div><h3 style="margin-top:24px">Accent color</h3><div class="theme-options"><button class="theme-swatch" data-accent="#2563eb"><span class="accent-dot" style="background:#2563eb"></span>Ocean</button><button class="theme-swatch" data-accent="#8b5cf6"><span class="accent-dot" style="background:#8b5cf6"></span>Violet</button><button class="theme-swatch" data-accent="#0f9f91"><span class="accent-dot" style="background:#0f9f91"></span>Mint</button><button class="theme-swatch" data-accent="#e05a8a"><span class="accent-dot" style="background:#e05a8a"></span>Rose</button><button class="theme-swatch" data-accent="#d97706"><span class="accent-dot" style="background:#d97706"></span>Amber</button></div><div class="eyebrow" style="margin-top:32px">WORKSPACE PERSONALIZATION</div><h2 style="margin:5px 0">Workspace controls</h2><div class="pxl-setting-row"><label>Layout density <select id="layoutDensity"><option value="comfortable">Comfortable</option><option value="compact">Compact</option><option value="spacious">Spacious</option></select></label><label>Custom accent <input type="color" id="customAccent" value="#2563eb"></label><button class="btn small" id="applyCustomAccent">Apply color</button></div><div class="ai-actions"><button class="btn small" id="backupWorkspace">↓ Backup workspace</button><button class="btn small" id="restoreWorkspace">↑ Restore workspace backup</button><input type="file" id="restoreWorkspaceFile" accept="application/json" class="hidden"></div><div class="eyebrow" style="margin-top:32px">PIXLECT AI · GROQ</div><h2 style="margin:5px 0">Connect your AI assistant</h2><p style="color:var(--muted)">Use your own Groq API key. Pixlect does not provide or contain an OpenAI/Groq key.</p><label class="setting-field"><strong>Groq API key</strong><div class="pxl-secret-row"><input id="groqKeyInput" type="password" autocomplete="off" placeholder="Paste your Groq API key"><button class="btn small" id="toggleGroqKeyVisibility" type="button">Show</button></div></label><label class="pxl-remember-row"><input type="checkbox" id="rememberGroqKey"> Remember this key on this device</label><label class="setting-field"><strong>Groq model</strong><input id="groqModelInput" list="groqModelOptions" value="openai/gpt-oss-120b" placeholder="Enter a Groq model ID"></label><div class="ai-actions"><button class="btn small" id="refreshGroqModels">↻ Detect available models</button><span class="ai-status" id="modelStatus">Manual model ID is supported.</span></div><datalist id="groqModelOptions"></datalist><div class="settings-warning"><strong>Security note:</strong> Remembering a Groq key stores it in this browser's localStorage. It is convenient, but not secure against malicious browser scripts or anyone with access to this browser profile. For a public Pixlect website, use a server-side proxy and keep provider keys on the server.</div><div class="ai-actions" style="margin-top:14px"><button class="btn primary" id="applyGroqKey">Save and apply key</button><button class="btn" id="clearGroqKey">Clear key</button><button class="btn" id="testGroqKey">Verify Groq key</button></div><p class="ai-status" id="groqStatus">Key not connected.</p>
+</section><section class="suite-view hidden" id="settingsView"><div class="suite-appbar"><button class="btn small" data-home>← Home</button><strong>⚙ Settings</strong><span class="suite-subtitle">Make Pixlect feel like yours</span></div><div class="theme-panel"><div class="eyebrow">APPEARANCE</div><h1 style="margin:5px 0 3px">Make it your workspace.</h1><p style="color:var(--muted);margin-top:0">Choose a theme and accent color. Changes apply across Pixlect.</p><h3>Theme</h3><div class="theme-options"><button class="theme-swatch" data-theme-choice="light">☀️<br><strong>Light</strong></button><button class="theme-swatch" data-theme-choice="dark">🌙<br><strong>Dark</strong></button><button class="theme-swatch" data-theme-choice="system">💻<br><strong>System</strong></button></div><h3 style="margin-top:24px">Accent color</h3><div class="theme-options"><button class="theme-swatch" data-accent="#2563eb"><span class="accent-dot" style="background:#2563eb"></span>Ocean</button><button class="theme-swatch" data-accent="#8b5cf6"><span class="accent-dot" style="background:#8b5cf6"></span>Violet</button><button class="theme-swatch" data-accent="#0f9f91"><span class="accent-dot" style="background:#0f9f91"></span>Mint</button><button class="theme-swatch" data-accent="#e05a8a"><span class="accent-dot" style="background:#e05a8a"></span>Rose</button><button class="theme-swatch" data-accent="#d97706"><span class="accent-dot" style="background:#d97706"></span>Amber</button></div><div class="eyebrow" style="margin-top:32px">WORKSPACE PERSONALIZATION</div><h2 style="margin:5px 0">Workspace controls</h2><div class="pxl-setting-row"><label>Layout density <select id="layoutDensity"><option value="comfortable">Comfortable</option><option value="compact">Compact</option><option value="spacious">Spacious</option></select></label><label>Custom accent <input type="color" id="customAccent" value="#2563eb"></label><button class="btn small" id="applyCustomAccent">Apply color</button></div><div class="ai-actions"><button class="btn small" id="backupWorkspace">↓ Backup workspace</button><button class="btn small" id="restoreWorkspace">↑ Restore workspace backup</button><input type="file" id="restoreWorkspaceFile" accept="application/json" class="hidden"></div><div class="eyebrow" style="margin-top:32px">PIXLECT AI · GROQ</div><h2 style="margin:5px 0">Connect your AI assistant</h2><p style="color:var(--muted)">Use your own Groq API key. Pixlect does not provide or contain an OpenAI/Groq key.</p><label class="setting-field"><strong>Groq API key</strong><div class="pxl-secret-row"><input id="groqKeyInput" type="password" autocomplete="off" placeholder="Paste your Groq API key"><button class="btn small" id="toggleGroqKeyVisibility" type="button">Show</button></div></label><label class="pxl-remember-row"><input type="checkbox" id="rememberGroqKey"> Remember this key on this device</label><label class="setting-field"><strong>Groq model</strong><input id="groqModelInput" list="groqModelOptions" value="openai/gpt-oss-120b" placeholder="Enter a Groq model ID"></label><div class="ai-actions"><button class="btn small" id="refreshGroqModels">↻ Detect available models</button><span class="ai-status" id="modelStatus">Manual model ID is supported.</span></div><datalist id="groqModelOptions"></datalist><div class="settings-warning"><strong>Security note:</strong> Remembering a Groq key stores it in this browser's localStorage. It is convenient, but not secure against malicious browser scripts or anyone with access to this browser profile. For a public Pixlect website, use a server-side proxy and keep provider keys on the server.</div><div class="ai-actions" style="margin-top:14px"><button class="btn primary" id="applyGroqKey">Save and apply key</button><button class="btn" id="clearGroqKey">Clear key</button><button class="btn" id="testGroqKey">Verify Groq key</button></div><p class="ai-status" id="groqStatus">Key not connected.</p>
  
  </div></section>
 <section class="suite-view hidden" id="toolsView">
@@ -413,6 +471,8 @@ function showSuiteView(which){
  const previous=suiteViews.find(id=>!$(id).classList.contains('hidden'));if(previous&&!['homeView','aiView','settingsView','updatesView'].includes(previous))aiContextSource=previous;
  suiteViews.forEach(id=>$(id).classList.toggle('hidden',id!==which));
  $('homeBtn').classList.toggle('hidden',which==='homeView');
+ $('updatesTopBtn').classList.toggle('active',which==='updatesView');
+ $('updatesTopBtn').setAttribute('aria-current',which==='updatesView'?'page':'false');
  if(which==='txtAppView'){if(!activeId&&!scratch)newDocument();renderDocList();updateCounts()}
 }
 function goHome(){if(scratch&&!confirmLeave())return;if(!scratch&&activeId)persist();showSuiteView('homeView')}
@@ -494,7 +554,16 @@ $('confirmExport').addEventListener('click',exportAs);
 
 
 // Pixlect themes and optional remembered Groq settings are local to this browser.
-function applyTheme(theme){const actual=theme==='system'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):theme;document.body.dataset.theme=actual;document.querySelectorAll('[data-theme-choice]').forEach(b=>b.classList.toggle('active',b.dataset.themeChoice===theme));try{localStorage.setItem('pixlect.theme',theme)}catch{}}
+function applyTheme(theme){
+ const preference=['light','dark','system'].includes(theme)?theme:'system';
+ const actual=preference==='system'?(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):preference;
+ document.body.dataset.theme=actual;
+ document.documentElement.dataset.theme=actual;
+ document.documentElement.style.colorScheme=actual;
+ const themeMeta=document.querySelector('meta[name="theme-color"]');if(themeMeta)themeMeta.content=actual==='dark'?'#0c1422':'#2563eb';
+ document.querySelectorAll('[data-theme-choice]').forEach(b=>b.classList.toggle('active',b.dataset.themeChoice===preference));
+ try{localStorage.setItem('pixlect.theme',preference)}catch{}
+}
 function applyAccent(color){document.documentElement.style.setProperty('--blue',color);const darker={ '#2563eb':'#1d4ed8','#8b5cf6':'#6d28d9','#0f9f91':'#0f766e','#e05a8a':'#be185d','#d97706':'#b45309'};document.documentElement.style.setProperty('--blue2',darker[color]||color);document.querySelectorAll('[data-accent]').forEach(b=>b.classList.toggle('active',b.dataset.accent===color));try{localStorage.setItem('pixlect.accent',color)}catch{}}
 document.querySelectorAll('[data-theme-choice]').forEach(b=>b.addEventListener('click',()=>applyTheme(b.dataset.themeChoice)));document.querySelectorAll('[data-accent]').forEach(b=>b.addEventListener('click',()=>applyAccent(b.dataset.accent)));try{applyTheme(localStorage.getItem('pixlect.theme')||'system');applyAccent(localStorage.getItem('pixlect.accent')||'#2563eb')}catch{applyTheme('system');applyAccent('#2563eb')}
 const AI_HISTORY_KEY='pixlect.ai.history.v2', AI_ARCHIVE_KEY='pixlect.ai.chats.v1', AI_CURRENT_CHAT_KEY='pixlect.ai.chat.current.id';
@@ -814,9 +883,8 @@ $('slideBody').addEventListener('input',saveSlide);$('slideBody').addEventListen
 const NEWS_PAGE_URL='https://pixlect-studio.github.io/News/';
 const NEWS_DB_URL='https://news-67-default-rtdb.firebaseio.com/.json';
 let studioNewsItems=[];
-let activeNewsFilter='all';
 let newsLastRefresh=0;
-const newsFilterButtons=[...document.querySelectorAll('[data-news-filter]')];
+let newsReaderExpanded=false;
 function newsText(value){
  if(value==null)return '';
  if(Array.isArray(value))return value.map(newsText).filter(Boolean).join(', ');
@@ -845,7 +913,7 @@ function validNewsUrl(raw,fallback=NEWS_PAGE_URL){
 function makeNewsItem({title,summary='',category='Normal',date='',url='',source='Pixlect Studio News',key='',path='',tags='',memberOnly=false,membersOnly=false,isMemberOnly=false,isPrivate=false,privateFlag=false,hidden=false,isPublished=true,published=true,status='',state=''}){
  const t=newsText(title),s=newsText(summary),c=newsText(category)||'Normal';
  if(t.length<4||t.length>180||/^(pixlect( studio)? news|latest news|news & announcements|announcements|updates)$/i.test(t))return null;
- const rec={title:t,summary:s.slice(0,520),category:c,categoryKey:newsCategoryKey(c+' '+newsText(tags)),dateMs:newsDate(date,key),dateRaw:date,url:validNewsUrl(url),source,path,memberOnly,membersOnly,isMemberOnly,isPrivate,private:privateFlag,hidden,isPublished,published,status,state};
+ const rec={title:t,summary:s.slice(0,520),fullText:s.slice(0,12000),category:c,categoryKey:newsCategoryKey(c+' '+newsText(tags)),dateMs:newsDate(date,key),dateRaw:date,url:validNewsUrl(url),source,sourceUrl:source==='Realtime Database'?NEWS_DB_URL:NEWS_PAGE_URL,path,memberOnly,membersOnly,isMemberOnly,isPrivate,private:privateFlag,hidden,isPublished,published,status,state};
  if(isMemberNews({...rec,tags},path))return null;
  return rec;
 }
@@ -896,45 +964,67 @@ async function fetchNewsSource(url,type){
   const data=await response.json(),items=[];collectNewsObjects(data,'Realtime Database',items);return {items,ok:true};
  }finally{clearTimeout(timer)}
 }
-function formatNewsDate(ms){if(!ms)return 'Date not provided by source';const d=new Date(ms);return d.toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'})+' · '+d.toLocaleTimeString(undefined,{hour:'numeric',minute:'2-digit'})}
-function newsMatchesFilter(item){return activeNewsFilter==='all'||item.categoryKey===activeNewsFilter}
-function renderStudioNews(){
- const host=$('newsCards'),query=String($('newsSearch')?.value||'').trim().toLowerCase();host.replaceChildren();
- const filtered=studioNewsItems.filter(item=>newsMatchesFilter(item)&&(!query||(item.title+' '+item.summary+' '+item.category).toLowerCase().includes(query)));
- $('newsCount').textContent=String(studioNewsItems.length);
- if(!studioNewsItems.length)return;
- if(!filtered.length){const el=document.createElement('div');el.className='news-empty';const icon=document.createElement('span');icon.className='news-empty-icon';icon.textContent=studioNewsItems.length?'⌕':'✦';const title=document.createElement('strong');title.textContent=studioNewsItems.length?'No updates match your search':'No public updates are available yet';const text=document.createElement('p');text.textContent=studioNewsItems.length?'Try a different keyword or category.':'The sources responded, but no public announcements could be read. Check again shortly.';el.append(icon,title,text);host.append(el);return}
- filtered.forEach((item,index)=>{
-  const card=document.createElement('article');card.className='news-card'+(index===0?' news-card-featured':'');
-  const meta=document.createElement('div');meta.className='news-card-meta';const category=document.createElement('span');category.className='news-category category-'+item.categoryKey;category.textContent=item.category||'Update';const date=document.createElement('time');date.textContent=formatNewsDate(item.dateMs);if(item.dateMs)date.dateTime=new Date(item.dateMs).toISOString();meta.append(category,date);
-  const title=document.createElement('h3');title.textContent=item.title;
-  const summary=document.createElement('p');summary.textContent=item.summary||'Open the official announcement to read the full update.';
-  const foot=document.createElement('div');foot.className='news-card-foot';const source=document.createElement('span');source.textContent=item.source;const link=document.createElement('a');link.href=item.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Read announcement ↗';foot.append(source,link);card.append(meta,title,summary,foot);host.append(card);
- });
+function formatNewsDate(ms){if(!ms)return 'Publication date not provided';const d=new Date(ms);return d.toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'})+' · '+d.toLocaleTimeString(undefined,{hour:'numeric',minute:'2-digit'})}
+function setNewsMessage(title,detail,failed=false){
+ const host=$('newsFeedMessage');host.replaceChildren();host.classList.remove('hidden');
+ if(!failed){const spinner=document.createElement('span');spinner.className='news-loader';spinner.setAttribute('aria-hidden','true');host.append(spinner)}
+ const heading=document.createElement('strong');heading.textContent=title;const text=document.createElement('span');text.textContent=detail;host.append(heading,text);
+ if(failed){const link=document.createElement('a');link.href=NEWS_PAGE_URL;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Open Pixlect Studio News ↗';host.append(link)}
+}
+function renderLatestNews(){
+ const card=$('newsLatestCard'),item=studioNewsItems[0];
+ if(!item){card.classList.add('hidden');return}
+ $('newsSourceLabel').textContent=item.source==='Realtime Database'?'PUBLIC NEWS DATABASE':'PIXLECT STUDIO NEWS';
+ $('newsLatestDate').textContent=formatNewsDate(item.dateMs);
+ $('newsLatestTitle').textContent=item.title;
+ const preview=item.summary||'Open the source to read the full announcement.';
+ $('newsLatestPreview').textContent=preview.length>360?preview.slice(0,357).trimEnd()+'…':preview;
+ $('newsLatestFull').textContent=item.fullText||item.summary||'The source did not provide additional article text.';
+ const sourceLink=$('goToNewsSource');
+ sourceLink.href=item.url&&item.url!==NEWS_PAGE_URL?item.url:(item.sourceUrl||NEWS_PAGE_URL);
+ sourceLink.textContent='Go to Source ↗';
+ newsReaderExpanded=false;$('newsLatestFull').classList.add('hidden');$('readLatestNews').textContent='Read Latest News';$('readLatestNews').setAttribute('aria-expanded','false');
+ card.classList.remove('hidden');$('newsFeedMessage').classList.add('hidden');
 }
 async function refreshStudioNews(){
- const button=$('refreshNewsBtn'),heroButton=$('updatesHeroRefresh'),status=$('newsSourceStatus'),last=$('newsLastUpdated'),message=$('newsFeedMessage');
- if(button){button.disabled=true;button.innerHTML='<span class="news-spin">↻</span> Refreshing…'}if(heroButton)heroButton.disabled=true;
- message.classList.remove('hidden');message.innerHTML='<span class="news-loader"></span><strong>Checking for the latest news</strong><span>Reading the official News page and public database.</span>';
- status.textContent='Syncing official news sources…';
- const results=await Promise.allSettled([fetchNewsSource(NEWS_PAGE_URL,'html'),fetchNewsSource(NEWS_DB_URL,'json')]);
- const all=[];let pageOk=false,dbOk=false;
- results.forEach((result,i)=>{if(result.status==='fulfilled'){if(i===0)pageOk=result.value.ok;else dbOk=result.value.ok;result.value.items.forEach(item=>{const existing=all.find(x=>x.title.toLowerCase()===item.title.toLowerCase());if(!existing)all.push(item);else{if(item.dateMs>(existing.dateMs||0)){existing.dateMs=item.dateMs;existing.dateRaw=item.dateRaw;existing.url=item.url;existing.source=item.source}if(item.summary&&item.summary.length>(existing.summary||'').length)existing.summary=item.summary}})}});
- studioNewsItems=all.sort((a,b)=>(b.dateMs||0)-(a.dateMs||0));newsLastRefresh=Date.now();
- if(pageOk&&dbOk)status.textContent='Connected to both official sources';else if(pageOk)status.textContent='Connected to Pixlect Studio News';else if(dbOk)status.textContent='Connected to the public news database';else status.textContent='News sources are currently unavailable';
- last.textContent=(pageOk||dbOk?'Last checked ':'Last attempt ')+new Date(newsLastRefresh).toLocaleTimeString(undefined,{hour:'numeric',minute:'2-digit'})+' · auto-refresh every 2 minutes';
- message.classList.toggle('hidden',studioNewsItems.length>0);
- if(!studioNewsItems.length){message.innerHTML=(pageOk||dbOk)?'<span class="news-empty-icon">✦</span><strong>No public announcements found</strong><span>The connected sources did not return any readable public news posts.</span>':'<span class="news-empty-icon">↻</span><strong>Could not reach the news sources</strong><span>Check your connection or open the official News site directly, then retry.</span>'}
- renderStudioNews();
- if(button){button.disabled=false;button.innerHTML='<span aria-hidden="true">↻</span> Refresh updates'}if(heroButton)heroButton.disabled=false;
+ const button=$('refreshNewsBtn');if(button?.disabled)return;
+ if(button){button.disabled=true;button.textContent='Refreshing…'}
+ setNewsMessage('Finding the newest public update','Reading Pixlect Studio News and the public news database.');
+ try{
+  const results=await Promise.allSettled([fetchNewsSource(NEWS_PAGE_URL,'html'),fetchNewsSource(NEWS_DB_URL,'json')]);
+  const all=[];let pageOk=false,dbOk=false;
+  results.forEach((result,index)=>{
+   if(result.status!=='fulfilled')return;
+   if(index===0)pageOk=result.value.ok;else dbOk=result.value.ok;
+   result.value.items.forEach(item=>{
+    const existing=all.find(x=>x.title.toLowerCase()===item.title.toLowerCase());
+    if(!existing)all.push(item);
+    else{
+     if((item.dateMs||0)>(existing.dateMs||0)){existing.dateMs=item.dateMs;existing.dateRaw=item.dateRaw;existing.url=item.url;existing.source=item.source;existing.sourceUrl=item.sourceUrl}
+     if((item.fullText||'').length>(existing.fullText||'').length)existing.fullText=item.fullText;
+     if((item.summary||'').length>(existing.summary||'').length)existing.summary=item.summary;
+    }
+   });
+  });
+  studioNewsItems=all.sort((a,b)=>(b.dateMs||0)-(a.dateMs||0));newsLastRefresh=Date.now();
+  $('newsLastUpdated').textContent=(pageOk||dbOk?'Last checked ':'Last attempt ')+new Date(newsLastRefresh).toLocaleTimeString(undefined,{hour:'numeric',minute:'2-digit'});
+  if(studioNewsItems.length){renderLatestNews();}
+  else if(pageOk||dbOk){$('newsLatestCard').classList.add('hidden');setNewsMessage('No public announcements were found','The connected sources did not return a readable public announcement.',true)}
+  else{$('newsLatestCard').classList.add('hidden');setNewsMessage('News is temporarily unavailable','The sources could not be reached. You can still open the official News page.',true)}
+ }catch(error){
+  $('newsLatestCard').classList.add('hidden');$('newsLastUpdated').textContent='Unable to check the news sources';
+  setNewsMessage('Could not load the latest update',error&&error.message?error.message:'A network or browser-access error occurred.',true);
+ }finally{if(button){button.disabled=false;button.textContent='↻ Refresh'}}
 }
-newsFilterButtons.forEach(b=>b.addEventListener('click',()=>{activeNewsFilter=b.dataset.newsFilter||'all';newsFilterButtons.forEach(x=>x.classList.toggle('active',x===b));renderStudioNews()}));
-$('newsSearch').addEventListener('input',renderStudioNews);
+$('readLatestNews').addEventListener('click',()=>{
+ newsReaderExpanded=!newsReaderExpanded;
+ $('newsLatestFull').classList.toggle('hidden',!newsReaderExpanded);
+ $('readLatestNews').textContent=newsReaderExpanded?'Hide Article':'Read Latest News';
+ $('readLatestNews').setAttribute('aria-expanded',String(newsReaderExpanded));
+});
 $('refreshNewsBtn').addEventListener('click',refreshStudioNews);
-$('updatesHeroRefresh').addEventListener('click',refreshStudioNews);
-// First load happens automatically; the feed refreshes while the workspace remains open.
-refreshStudioNews();
-setInterval(()=>{if(!document.hidden)refreshStudioNews()},120000);
+// Fetch when Updates is opened; refresh periodically only while that view is visible.
+setInterval(()=>{if(!document.hidden&&!$('updatesView').classList.contains('hidden'))refreshStudioNews()},120000);
 
 })();
 
